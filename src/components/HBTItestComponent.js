@@ -7,13 +7,21 @@ const HBTItestComponent = ({ question, onClickNext }) => {
   function mouseLeave(e) {
     e.target.style = "background: #f7f7f7";
   }
+  function onClickAnswer1(e) {
+    e.target.style = "background: #f7f7f7";
+    onClickNext(question.answer1.type);
+  }
+  function onClickAnswer2(e) {
+    e.target.style = "background: #f7f7f7";
+    onClickNext(question.answer2.type);
+  }
   return (
     <div id="question-container">
       <div id="question-number">{`Q${question.id}`}</div>
       <div id="question">{`${question.question}`}</div>
       <div
         className="answer-button"
-        onClick={() => onClickNext(question.answer1.type)}
+        onClick={onClickAnswer1}
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
       >
@@ -21,7 +29,7 @@ const HBTItestComponent = ({ question, onClickNext }) => {
       </div>
       <div
         className="answer-button"
-        onClick={() => onClickNext(question.answer2.type)}
+        onClick={onClickAnswer2}
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
       >
