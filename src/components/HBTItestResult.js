@@ -71,6 +71,7 @@ const HBTItestResult = ({ submittedList }) => {
 
   let type;
   let character;
+  let imageSrc;
   let description;
   let recommendedExercise;
   let unrecommendedExercise;
@@ -78,6 +79,7 @@ const HBTItestResult = ({ submittedList }) => {
     if (result === HBTItestResults[j].type) {
       type = HBTItestResults[j].type;
       character = HBTItestResults[j].character;
+      imageSrc = HBTItestResults[j].image;
       description = HBTItestResults[j].description;
       recommendedExercise = HBTItestResults[j].recommendedExercise;
       unrecommendedExercise = HBTItestResults[j].unrecommendedExercise;
@@ -88,6 +90,7 @@ const HBTItestResult = ({ submittedList }) => {
       <div id="hbti-question">나의 헬BTI는</div>
       <div id="hbti-type">{type}</div>
       <div id="hbti-character">{character}</div>
+      <img src={imageSrc} alt="hbti-type" />
       <div id="hbti-description">&nbsp;{description}</div>
       <div className="hbti-exercise">어울리는 운동: {recommendedExercise}</div>
       <div className="hbti-exercise">

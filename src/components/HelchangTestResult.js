@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import HelchangResults from "../results/HelchangResults";
+import HelchangTestResults from "../results/HelchangTestResults";
 
 const HelchangTestResult = ({ totalScore }) => {
   function mouseOver(e) {
@@ -13,11 +13,11 @@ const HelchangTestResult = ({ totalScore }) => {
 
   let character;
   let description;
-  for (let i = 0; i < HelchangResults.length; i++) {
-    for (let j = 0; j < HelchangResults[i].score.length; j++) {
-      if (HelchangResults[i].score[j] === totalScore) {
-        character = HelchangResults[i].score[j];
-        description = HelchangResults[i].score[j];
+  for (let i = 0; i < HelchangTestResults.length; i++) {
+    for (let j = 0; j < HelchangTestResults[i].score.length; j++) {
+      if (HelchangTestResults[i].score[j] === totalScore) {
+        character = HelchangTestResults[i].character;
+        description = HelchangTestResults[i].description;
       }
     }
   }
