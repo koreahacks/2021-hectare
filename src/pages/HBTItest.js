@@ -12,7 +12,6 @@ const HelchangTest = () => {
     setSubmittedList(newSubmittedList);
     setCurrentQuestionId(currentQuestionId + 1);
   };
-  console.log(submittedList);
   return (
     <div id="HBTI-test-container">
       {HBTItestQuestions.length !== currentQuestionId - 1 ? (

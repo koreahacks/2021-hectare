@@ -12,15 +12,15 @@
     margin-bottom: 20px;
     width: 332px;
     height: 52px;
-    background: var(--unnamed-color-b088f9) 0% 0% no-repeat padding-box;
-    background: #b088f9 0% 0% no-repeat padding-box;
+    background-color: #f7f7f7;
+    border-style: solid;
     border-radius: 43px;
+    border-width: 2px;
+    border-color: #b088f9;
     display: flex;
     justify-content: center;
     align-items: center;
-    span {
-      font: normal normal bold 16px/24px Noto Sans KR;
-      color: white;
-    }
+    font: normal normal bold 16px/24px Noto Sans KR;
+    color: black;
   }
 }
