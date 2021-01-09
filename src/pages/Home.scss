@@ -1,0 +1,26 @@
+#home-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  #home-main-image {
+    width: 258px;
+    margin: 40px;
+  }
+  .home-button {
+    margin-bottom: 20px;
+    width: 332px;
+    height: 52px;
+    background: var(--unnamed-color-b088f9) 0% 0% no-repeat padding-box;
+    background: #b088f9 0% 0% no-repeat padding-box;
+    border-radius: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      font: normal normal bold 16px/24px Noto Sans KR;
+      color: white;
+    }
+  }
+}
