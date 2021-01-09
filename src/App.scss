@@ -47,7 +47,7 @@ a:hover {
   }
   #question {
     font: normal normal 800 20px/27px Noto Sans Kannada;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .answer-button {
     margin: 0 auto;
@@ -67,5 +67,59 @@ a:hover {
       padding-left: 20px;
       padding-right: 20px;
     }
+  }
+}
+
+#result-container {
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  #hbti-question {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  #hbti-type {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: #b088f9;
+  }
+  #hbti-character {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #b088f9;
+  }
+  #hbti-description {
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  .hbti-exercise {
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .hbti-button {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 332px;
+    height: 52px;
+    background-color: #f7f7f7;
+    border-style: solid;
+    border-radius: 43px;
+    border-width: 2px;
+    border-color: #b088f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: normal normal bold 16px/24px Noto Sans KR;
+    color: black;
   }
 }

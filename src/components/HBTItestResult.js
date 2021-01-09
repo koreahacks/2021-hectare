@@ -1,6 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import HBTItestResults from "../results/HBTItestResults";
 
 const HBTItestResult = ({ submittedList }) => {
+  function mouseOver(e) {
+    e.target.style = "background: #b088f9; color: white;";
+  }
+  function mouseLeave(e) {
+    e.target.style =
+      "background: #f7f7f7; border-color: #b088f9;  color: black";
+  }
   let result = "";
   let E = 0;
   let I = 0;
@@ -60,10 +69,41 @@ const HBTItestResult = ({ submittedList }) => {
     result += "P";
   }
 
+  let type;
+  let character;
+  let description;
+  let recommendedExercise;
+  let unrecommendedExercise;
+  for (let j = 0; j < HBTItestResults.length; j++) {
+    if (result === HBTItestResults[j].type) {
+      type = HBTItestResults[j].type;
+      character = HBTItestResults[j].character;
+      description = HBTItestResults[j].description;
+      recommendedExercise = HBTItestResults[j].recommendedExercise;
+      unrecommendedExercise = HBTItestResults[j].unrecommendedExercise;
+    }
+  }
   return (
-    <div>
-      <div>Result Page</div>
-      <div>{result}</div>
+    <div id="result-container">
+      <div id="hbti-question">나의 헬BTI는</div>
+      <div id="hbti-type">{type}</div>
+      <div id="hbti-character">{character}</div>
+      <div id="hbti-description">&nbsp;{description}</div>
+      <div className="hbti-exercise">어울리는 운동: {recommendedExercise}</div>
+      <div className="hbti-exercise">
+        안 어울리는 운동: {unrecommendedExercise}
+      </div>
+      <Link
+        to={"/helchang-ability-test"}
+        className="hbti-button"
+        id="button2"
+        onMouseOver={mouseOver}
+        onMouseLeave={mouseLeave}
+        onTouchStart={mouseOver}
+        onTouchEnd={mouseLeave}
+      >
+        헬창력 알아보기
+      </Link>
     </div>
   );
 };

@@ -29,10 +29,10 @@ const Home = () => {
         onTouchStart={mouseOver}
         onTouchEnd={mouseLeave}
       >
-        헬창력 알아보기
+        헬BTI 알아보기
       </Link>
       <Link
-        to={"/2"}
+        to={"/helchang-ability-test"}
         className="home-button"
         id="button2"
         onMouseOver={mouseOver}
@@ -40,16 +40,7 @@ const Home = () => {
         onTouchStart={mouseOver}
         onTouchEnd={mouseLeave}
       >
-        헬BTI 알아보기
-      </Link>
-      <Link
-        to={"/3"}
-        className="home-button"
-        id="button3"
-        onMouseOver={mouseOver}
-        onMouseLeave={mouseLeave}
-      >
-        헬궁합 연예인편
+        헬창력 알아보기
       </Link>
     </div>
   );
