@@ -14,8 +14,7 @@
 @media screen and (max-width: 400px) {
   .content {
     width: 100%;
-    height: 90%;
-    overflow: hidden;
+    height: 85%;
   }
 }
 
@@ -23,8 +22,7 @@
   .content {
     margin: 0 auto;
     width: 400px;
-    height: 90%;
-    overflow: hidden;
+    height: 85%;
   }
 }
 a {
@@ -33,6 +31,10 @@ a {
 }
 a:hover {
   color: black;
+}
+
+#fake-div {
+  height: 100px;
 }
 
 #question-container {
@@ -106,7 +108,7 @@ a:hover {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 70px;
+    margin-top: 30px;
     margin-bottom: 10px;
   }
   #hbti-type {
@@ -118,10 +120,16 @@ a:hover {
   }
   #hbti-character {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
     margin-bottom: 20px;
     color: #b088f9;
+  }
+  #hbti-image {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
   }
   #hbti-description {
     font-weight: 600;
@@ -130,6 +138,43 @@ a:hover {
   .hbti-exercise {
     font-weight: 600;
     margin-bottom: 20px;
+  }
+  #helchang-question {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  #helchang-score {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+  }
+  #helchang-type {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 5px;
+    color: #b088f9;
+  }
+  #helchang-character {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #b088f9;
+  }
+  #helchang-image {
+    max-width: 300px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  #helchang-description {
+    font-weight: 600;
+    margin-bottom: 30px;
   }
   .home-button {
     margin: 0 auto;

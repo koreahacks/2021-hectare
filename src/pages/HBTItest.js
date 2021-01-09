@@ -14,18 +14,24 @@ const HBTItest = () => {
     setCurrentQuestionId(currentQuestionId + 1);
   };
   return (
-    <div id="HBTI-test-container">
-      {HBTItestQuestions.length !== currentQuestionId - 1 ? (
-        <>
-          <HBTItestComponent
-            question={HBTItestQuestions[currentQuestionId - 1]}
-            onClickNext={onClickNext}
-          />
-        </>
-      ) : (
-        <HBTItestResult submittedList={submittedList} />
-      )}
-    </div>
+    <>
+      <div id="HBTI-test-container">
+        {HBTItestQuestions.length !== currentQuestionId - 1 && (
+          <>
+            <div id="fake-div"></div>
+            <HBTItestComponent
+              question={HBTItestQuestions[currentQuestionId - 1]}
+              onClickNext={onClickNext}
+            />
+          </>
+        )}
+      </div>
+      <div id="HBTI-result-container">
+        {HBTItestQuestions.length === currentQuestionId - 1 && (
+          <HBTItestResult submittedList={submittedList} />
+        )}
+      </div>
+    </>
   );
 };
 

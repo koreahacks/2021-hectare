@@ -7,7 +7,6 @@ const HelchangTest = () => {
   document.querySelector("title").innerText = "Helchang Test";
   const [currentQuestionId, setCurrentQuestionId] = useState(1);
   const [totalScore, setTotalScore] = useState(0);
-  console.log(totalScore);
 
   const onClickNext = (answer) => {
     if (answer === "plus") {
@@ -15,22 +14,25 @@ const HelchangTest = () => {
     }
     setCurrentQuestionId(currentQuestionId + 1);
   };
-
   return (
-    <div id="helchang-test-container">
-      <>
-        {HelchangTestQuestions.length !== currentQuestionId - 1 ? (
+    <>
+      <div id="helchang-test-container">
+        {HelchangTestQuestions.length !== currentQuestionId - 1 && (
           <>
+            <div id="fake-div"></div>
             <HelchangTestComponent
               question={HelchangTestQuestions[currentQuestionId - 1]}
               onClickNext={onClickNext}
             />
           </>
-        ) : (
+        )}
+      </div>
+      <div id="helchang-result-container">
+        {HelchangTestQuestions.length === currentQuestionId - 1 && (
           <HelchangTestResult totalScore={totalScore} />
         )}
-      </>
-    </div>
+      </div>
+    </>
   );
 };
 

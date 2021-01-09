@@ -11,11 +11,13 @@ const HelchangTestResult = ({ totalScore }) => {
       "background: #f7f7f7; border-color: #b088f9;  color: black";
   }
 
+  let imageSrc;
   let character;
   let description;
   for (let i = 0; i < HelchangTestResults.length; i++) {
     for (let j = 0; j < HelchangTestResults[i].score.length; j++) {
       if (HelchangTestResults[i].score[j] === totalScore) {
+        imageSrc = HelchangTestResults[i].image;
         character = HelchangTestResults[i].character;
         description = HelchangTestResults[i].description;
       }
@@ -25,11 +27,12 @@ const HelchangTestResult = ({ totalScore }) => {
     <div id="result-container">
       <div id="helchang-question">나의 헬창력은</div>
       <div id="helchang-score">{totalScore}Kg</div>
+      <img src={imageSrc} alt="helchang-type" id="helchang-image" />
       <div id="helchang-character">{character}</div>
       <div id="helchang-description">{description}</div>
       <Link
         to={"/hbti-test"}
-        className="hbti-button"
+        className="home-button"
         id="button1"
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
