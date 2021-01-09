@@ -12,26 +12,26 @@ const HBTItestResult = ({ submittedList }) => {
   let P = 0;
 
   for (let i = 0; i < submittedList.length; i++) {
-    if (i < 5) {
-      if (submittedList[i] === true) {
+    if (submittedList[i] === "E" || submittedList[i] === "I") {
+      if (submittedList[i] === "E") {
         E += 1;
       } else {
         I += 1;
       }
-    } else if (i >= 5 && i < 10) {
-      if (submittedList[i] === true) {
+    } else if (submittedList[i] === "S" || submittedList[i] === "N") {
+      if (submittedList[i] === "S") {
         S += 1;
       } else {
         N += 1;
       }
-    } else if (i >= 10 && i < 15) {
-      if (submittedList[i] === true) {
+    } else if (submittedList[i] === "T" || submittedList[i] === "F") {
+      if (submittedList[i] === "T") {
         T += 1;
       } else {
         F += 1;
       }
-    } else if (i >= 15 && i < 20) {
-      if (submittedList[i] === true) {
+    } else if (submittedList[i] === "J" || submittedList[i] === "P") {
+      if (submittedList[i] === "J") {
         J += 1;
       } else {
         P += 1;
@@ -59,6 +59,7 @@ const HBTItestResult = ({ submittedList }) => {
   } else {
     result += "P";
   }
+
   return (
     <div>
       <div>Result Page</div>

@@ -5,11 +5,17 @@ const HBTItestComponent = ({ question, onClickNext }) => {
     <div id="question-container">
       <div id="question-number">{`Q${question.id}`}</div>
       <div id="question">{`${question.question}`}</div>
-      <div className="answer-button" onClick={() => onClickNext(true)}>
-        <span>{`${question.answer1}`}</span>
+      <div
+        className="answer-button"
+        onClick={() => onClickNext(question.answer1.type)}
+      >
+        <span>{`${question.answer1.answer}`}</span>
       </div>
-      <div className="answer-button" onClick={() => onClickNext(false)}>
-        <span>{`${question.answer2}`}</span>
+      <div
+        className="answer-button"
+        onClick={() => onClickNext(question.answer2.type)}
+      >
+        <span>{`${question.answer2.answer}`}</span>
       </div>
     </div>
   );
