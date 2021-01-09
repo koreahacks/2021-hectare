@@ -16,19 +16,16 @@ const HBTItestComponent = ({ question, onClickNext }) => {
         onClick={() => onClickNext(question.answer1.type)}
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
-        onTouchStart={mouseOver}
       >
-        {`${question.answer1.answer}`}
+        <span>{`${question.answer1.answer}`}</span>
       </div>
       <div
         className="answer-button"
         onClick={() => onClickNext(question.answer2.type)}
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
-        onTouchStart={mouseOver}
-        onTouchEnd={mouseLeave}
       >
-        {`${question.answer2.answer}`}
+        <span>{`${question.answer2.answer}`}</span>
       </div>
     </div>
   );

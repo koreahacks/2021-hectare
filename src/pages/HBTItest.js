@@ -4,6 +4,7 @@ import HBTItestComponent from "../components/HBTItestComponent";
 import HBTItestResult from "../components/HBTItestResult";
 
 const HelchangTest = () => {
+  document.querySelector("title").innerText = "HBTI Test";
   const [currentQuestionId, setCurrentQuestionId] = useState(1);
   const [submittedList, setSubmittedList] = useState([]);
 

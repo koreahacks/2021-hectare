@@ -57,8 +57,15 @@ a:hover {
     border-radius: 12px;
     font: normal normal 800 16px/22px Noto Sans Kannada;
     margin-bottom: 20px;
-    display: flex;
-    align-items: center;
     cursor: pointer;
+    span {
+      display: flex;
+      align-items: center;
+      width: 280px;
+      height: 80px;
+      border-radius: 12px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }

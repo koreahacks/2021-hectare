@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Home.scss";
 
 const Home = () => {
+  document.querySelector("title").innerText = "HBTI Home";
   function mouseOver(e) {
     e.target.style = "background: #b088f9; color: white;";
   }
