@@ -3,7 +3,7 @@ import { HBTItestQuestions } from "../questions/HBTItestQuestions";
 import HBTItestComponent from "../components/HBTItestComponent";
 import HBTItestResult from "../components/HBTItestResult";
 
-const HelchangTest = () => {
+const HBTItest = () => {
   document.querySelector("title").innerText = "HBTI Test";
   const [currentQuestionId, setCurrentQuestionId] = useState(1);
   const [submittedList, setSubmittedList] = useState([]);
@@ -29,4 +29,4 @@ const HelchangTest = () => {
   );
 };
 
-export default HelchangTest;
+export default HBTItest;

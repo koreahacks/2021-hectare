@@ -68,6 +68,32 @@ a:hover {
       padding-right: 20px;
     }
   }
+  .OX-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .OX-button {
+      margin: 0 auto;
+      background: #f7f7f7 0% 0% no-repeat padding-box;
+      width: 120px;
+      height: 120px;
+      border-radius: 12px;
+      font: normal normal 800 16px/22px Noto Sans Kannada;
+      margin-bottom: 20px;
+      cursor: pointer;
+      span {
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+        height: 120px;
+        border-radius: 12px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }
 }
 
 #result-container {
@@ -80,7 +106,7 @@ a:hover {
     text-align: center;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 30px;
+    margin-top: 70px;
     margin-bottom: 10px;
   }
   #hbti-type {
@@ -105,7 +131,7 @@ a:hover {
     font-weight: 600;
     margin-bottom: 20px;
   }
-  .hbti-button {
+  .home-button {
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 10px;

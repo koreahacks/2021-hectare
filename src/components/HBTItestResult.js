@@ -95,7 +95,7 @@ const HBTItestResult = ({ submittedList }) => {
       </div>
       <Link
         to={"/helchang-ability-test"}
-        className="hbti-button"
+        className="home-button"
         id="button2"
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}

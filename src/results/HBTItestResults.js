@@ -1,6 +1,6 @@
 const HBTItestResults = [
   {
-    ID: "1",
+    id: 1,
     type: "INFP",
     character: "실행력 부족한 완벽주의자",
     description:
@@ -9,7 +9,7 @@ const HBTItestResults = [
     unrecommendedExercise: "헬스장만 멀지 않으면 됩니다.",
   },
   {
-    ID: "2",
+    id: 2,
     type: "ESTJ",
     character: "엄근진 체육관 관장님",
     description:
@@ -18,7 +18,7 @@ const HBTItestResults = [
     unrecommendedExercise: "축구, 농구 등",
   },
   {
-    ID: "3",
+    id: 3,
     type: "ESTP",
     character: "인생은 한방! 스릴을 즐기는 폭주족",
     description:
@@ -27,7 +27,7 @@ const HBTItestResults = [
     unrecommendedExercise: "전통무술, 요가, 수영",
   },
   {
-    ID: "4",
+    id: 4,
     type: "ESFJ",
     character: "물은 물이요...산은 산이로다.., 해탈한 스님형",
     description:
@@ -36,7 +36,7 @@ const HBTItestResults = [
     unrecommendedExercise: "웨이트트레이닝, 보디빌딩",
   },
   {
-    ID: "5",
+    id: 5,
     type: "ESFP",
     character: "이 구역의 인싸는 나야! 헬스장 아이돌형",
     description:
@@ -45,16 +45,16 @@ const HBTItestResults = [
     unrecommendedExercise: "홈트, 혼자 하는 운동",
   },
   {
-    ID: "6",
+    id: 6,
     type: "ENTJ",
-    character: "멘탈과 피지컬의 조화, 제다이형",
+    character: "멘탈과 피지컬의 조화, 국가대표형",
     description:
       "강한 정신력과 육체를 모두 소유한 당신! 조직적, 체계적, 계획적이며 완벽을 추구하는 경향이 있습니다. 효율을 중시하고 단순반복을 싫어합니다. 운동능력이 좋고 정신력도 강해서 어떤 운동이든 잘 소화해내지만, 가끔 지나친 승부욕과 과시욕 때문에 꼴불견이 될 수도 있으니 조심! 또한 열정이 지나쳐 금방 지쳐버리지 않게 스스로 컨디션을 잘 살펴야 합니다.",
     recommendedExercise: "대부분의 운동",
     unrecommendedExercise: "정통 보디빌딩, 마라톤",
   },
   {
-    ID: "7",
+    id: 7,
     type: "ENTP",
     character: "노력부족 타고난 근수저형",
     description:
@@ -63,7 +63,7 @@ const HBTItestResults = [
     unrecommendedExercise: "정통 보디빌딩, 웨이트 트레이닝",
   },
   {
-    ID: "8",
+    id: 8,
     type: "ENFJ",
     character: "똥꼬발랄 시골 똥개형",
     description:
@@ -72,7 +72,7 @@ const HBTItestResults = [
     unrecommendedExercise: "예술형 스포츠 (체조, 피겨스케이팅 등)",
   },
   {
-    ID: "9",
+    id: 9,
     type: "ENFP",
     character: "내가 가는 길이 곳 길이다! 헬창계의 개척자형",
     description:
@@ -81,7 +81,7 @@ const HBTItestResults = [
     unrecommendedExercise: "웨이트 트레이닝, 정통 보디빌딩",
   },
   {
-    ID: "10",
+    id: 10,
     type: "ISTJ",
     character: "딱딱 정해져 있는 인간 헬스플래너",
     description:
@@ -90,7 +90,7 @@ const HBTItestResults = [
     unrecommendedExercise: "예술형 스포츠(체조, 피겨스케이팅)",
   },
   {
-    ID: "11",
+    id: 11,
     type: "ISTP",
     character: "넓고~ 얕게~ 한 번씩은 해봤는데, 두 번은 안 해본 프로깔짝러",
     description:
@@ -99,7 +99,7 @@ const HBTItestResults = [
     unrecommendedExercise: "마라톤, 정통 보디빌딩, 혼자 하는 운동",
   },
   {
-    ID: "12",
+    id: 12,
     type: "ISFJ",
     character: "헬스장 랜덤박스",
     description:
@@ -108,7 +108,7 @@ const HBTItestResults = [
     unrecommendedExercise: "계속해서 변화하는 편",
   },
   {
-    ID: "13",
+    id: 13,
     type: "ISFP",
     character: "운동 해도 안해도 나는 만족해:)",
     description:
@@ -117,7 +117,7 @@ const HBTItestResults = [
     unrecommendedExercise: "동기를 불러일으키지 않을 힘든 운동들",
   },
   {
-    ID: "14",
+    id: 14,
     type: "INTJ",
     character: "마이웨이 단호박 유형",
     description:
@@ -126,7 +126,7 @@ const HBTItestResults = [
     unrecommendedExercise: "팀 운동, 축구, 농구",
   },
   {
-    ID: "15",
+    id: 15,
     type: "INTP",
     character: "머리는 이미 앞서있다! 내 갈 길을 가는 고독한 헬스장 방랑자",
     description:
@@ -135,7 +135,7 @@ const HBTItestResults = [
     unrecommendedExercise: "팀 운동, 축구, 농구",
   },
   {
-    ID: "16",
+    id: 16,
     type: "INFJ",
     character: "몸도 바르게, 마음도 바르게 키다리 아저씨형",
     description:
