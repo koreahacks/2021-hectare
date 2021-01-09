@@ -5,6 +5,8 @@ import "./Home.scss";
 const Home = () => {
   return (
     <div id="home-container">
+      <h2 id="home-title">헬스 능력 테스트</h2>
+      <h3 id="home-subtitle">당신의 헬스 유형과 능력은 과연?</h3>
       <img
         id="home-main-image"
         alt="home main"

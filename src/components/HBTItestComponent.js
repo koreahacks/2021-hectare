@@ -3,15 +3,14 @@ import React from "react";
 const HBTItestComponent = ({ question, onClickNext }) => {
   return (
     <div id="question-container">
-      <div id="question">{`Q${question.id}. ${question.question}`}</div>
-      <div
-        className="answer-button"
-        onClick={() => onClickNext(true)}
-      >{`${question.answer1}`}</div>
-      <div
-        className="answer-button"
-        onClick={() => onClickNext(false)}
-      >{`${question.answer2}`}</div>
+      <div id="question-number">{`Q${question.id}`}</div>
+      <div id="question">{`${question.question}`}</div>
+      <div className="answer-button" onClick={() => onClickNext(true)}>
+        <span>{`${question.answer1}`}</span>
+      </div>
+      <div className="answer-button" onClick={() => onClickNext(false)}>
+        <span>{`${question.answer2}`}</span>
+      </div>
     </div>
   );
 };

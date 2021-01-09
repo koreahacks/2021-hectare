@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { HBTItestQuestions } from "../questions/HBTItestQuestions";
 import HBTItestComponent from "../components/HBTItestComponent";
 import HBTItestResult from "../components/HBTItestResult";
-import "./HBTItest.scss";
 
 const HelchangTest = () => {
   const [currentQuestionId, setCurrentQuestionId] = useState(1);
