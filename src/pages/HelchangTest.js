@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import HelchangTestQuestions from "../questions/HelchangtestQuestions";
 import HelchangTestComponent from "../components/HelchangTestComponent";
 import HelchangTestResult from "../components/HelchangTestResult";
