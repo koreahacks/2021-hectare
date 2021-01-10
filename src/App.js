@@ -9,7 +9,9 @@ const App = () => {
   return (
     <div className="main-container">
       <Link to={"/"}>
-        <h2 id="main-title">HBTI</h2>
+        <div id="logo">
+          <img src="/image/logo.png" alt="logo" />
+        </div>
       </Link>
       <div className="content">
         <Route path="/" exact={true} component={Home} />

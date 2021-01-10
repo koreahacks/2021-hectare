@@ -89,8 +89,8 @@ const HBTItestResult = ({ submittedList }) => {
     <div id="result-container">
       <div id="hbti-question">나의 헬BTI는</div>
       <div id="hbti-type">{type}</div>
-      <div id="hbti-character">{character}</div>
       <img src={imageSrc} alt="hbti-type" id="hbti-image" />
+      <div id="hbti-character">{character}</div>
       <div id="hbti-description">&nbsp;{description}</div>
       <div className="hbti-exercise">어울리는 운동: {recommendedExercise}</div>
       <div className="hbti-exercise">

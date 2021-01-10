@@ -26,10 +26,10 @@ const HelchangTestResult = ({ totalScore }) => {
   return (
     <div id="result-container">
       <div id="helchang-question">나의 헬창력은</div>
-      <div id="helchang-score">{totalScore}Kg</div>
+      <div id="helchang-score">{totalScore}kg</div>
       <img src={imageSrc} alt="helchang-type" id="helchang-image" />
       <div id="helchang-character">{character}</div>
-      <div id="helchang-description">{description}</div>
+      <div id="helchang-description">&nbsp;{description}</div>
       <Link
         to={"/hbti-test"}
         className="home-button"

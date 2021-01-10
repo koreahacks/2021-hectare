@@ -25,7 +25,7 @@ const Home = () => {
         onTouchStart={mouseOver}
         onTouchEnd={mouseLeave}
       >
-        헬BTI 알아보기
+        헬BTI 알아보기 (20문항)
       </Link>
       <Link
         to={"/helchang-ability-test"}
@@ -36,7 +36,7 @@ const Home = () => {
         onTouchStart={mouseOver}
         onTouchEnd={mouseLeave}
       >
-        헬창력 알아보기
+        헬창력 알아보기 (20문항)
       </Link>
     </div>
   );
