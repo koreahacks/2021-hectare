@@ -38,13 +38,12 @@ const HBTItestQuestions = [
     id: 5,
     question: "선호하는 운동기록 방법은?",
     answer1: { type: "E", answer: "기록을 SNS에 공유한다." },
-    answer2: { type: "I", answer: "메모장에 기록해서 나만 본다." },
+    answer2: { type: "I", answer: "메모장l에 기록해서 나만 본다." },
     type: "E/I",
   },
   {
     id: 6,
-    question:
-      "즐겨보는 TV 프로그램에 몸짱 연예인이 나왔다. 당신이 지금 드는 생각은?",
+    question: "즐겨보는 TV 프로그램에 몸짱 연예인이 나왔다. 당신이 지금 드는 생각은?",
     answer1: { type: "S", answer: "와...저 형은 3대 몇 칠까?" },
     answer2: { type: "N", answer: "와...나도 저 형처럼 되고 싶다!" },
     type: "S/N",
@@ -101,8 +100,7 @@ const HBTItestQuestions = [
   },
   {
     id: 12,
-    question:
-      "벤치프레스 고중량에 도전하다가 바벨을 가슴에 떨어뜨린 사람을 보며 드는 생각은?",
+    question: "벤치프레스 고중량에 도전하다가 바벨을 가슴에 떨어뜨린 사람을 보며 드는 생각은?",
     answer1: { type: "T", answer: "아쉽다ㅠㅠ 거의 들었는데!" },
     answer2: { type: "F", answer: "아프겠다ㅠㅠ안다쳤나???" },
     type: "T/F",
@@ -117,8 +115,7 @@ const HBTItestQuestions = [
   },
   {
     id: 14,
-    question:
-      "어제 오랜만에 하체운동을 해서 근육통이 심하다는 친구에게... 해줄 말은?",
+    question: "어제 오랜만에 하체운동을 해서 근육통이 심하다는 친구에게... 해줄 말은?",
     answer1: { type: "T", answer: "그럼 오늘은 상체하면 되겠다!" },
     answer2: { type: "F", answer: "괜찮아? 며칠 쉬었다가 다시 빡세게 달리자" },
     type: "T/F",
@@ -140,8 +137,7 @@ const HBTItestQuestions = [
   },
   {
     id: 17,
-    question:
-      "오늘 헬스장이 갑자기 문을 닫아 운동을 하지 못하게 되었다. 당신의 마음 상태는?",
+    question: "오늘 헬스장이 갑자기 문을 닫아 운동을 하지 못하게 되었다. 당신의 마음 상태는?",
     answer1: {
       type: "J",
       answer: "애써 세운 운동 계획이 무너질까봐 걱정한다.",
@@ -174,13 +170,11 @@ const HBTItestQuestions = [
     question: "여행계획을 세울 때 당신의 모습은?",
     answer1: {
       type: "J",
-      answer:
-        "여행일정에 운동을 포함시키고, 근처에 헬스장이 있는 숙소로 알아본다.",
+      answer: "여행일정에 운동을 포함시키고, 근처에 헬스장이 있는 숙소로 알아본다.",
     },
     answer2: {
       type: "P",
-      answer:
-        "며칠 쉬며 여행을 즐기고, 여행을 다녀온 뒤 새로운 마음으로 다시 운동한다.",
+      answer: "며칠 쉬며 여행을 즐기고, 여행을 다녀온 뒤 새로운 마음으로 다시 운동한다.",
     },
     type: "J/P",
   },

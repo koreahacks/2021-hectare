@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import HBTItestResults from "../results/HBTItestResults";
+import axios from "axios";
+import html2canvas from "html2canvas";
 
-const HBTItestResult = ({ submittedList }) => {
+const HBTItestResult = ({ submittedList, userInfos }) => {
   function mouseOver(e) {
     e.target.style = "background: #b088f9; color: white;";
   }
   function mouseLeave(e) {
-    e.target.style =
-      "background: #f7f7f7; border-color: #b088f9;  color: black";
+    e.target.style = "background: #f7f7f7; border-color: #b088f9;  color: black";
   }
   let result = "";
   let E = 0;
@@ -69,12 +70,43 @@ const HBTItestResult = ({ submittedList }) => {
     result += "P";
   }
 
+  function onCapture() {
+    const newLogo = document.createElement("div");
+    newLogo.id = "logo";
+    newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
+    const newResultBox = new Promise(function (resolve, reject) {
+      document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
+    });
+    newResultBox
+      .then(
+        html2canvas(document.getElementById("result-box")).then((canvas) => {
+          console.log(document.getElementById("result-box"));
+          saveAs(canvas.toDataURL("image/png"), "hbti-result.png");
+        })
+      )
+      .then(document.getElementById("result-box").removeChild(newLogo));
+  }
+
+  function saveAs(uri, filename) {
+    let link = document.createElement("a");
+    if (typeof link.download === "string") {
+      link.href = uri;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else {
+      window.open(uri);
+    }
+  }
+
   let type;
   let character;
   let imageSrc;
   let description;
   let recommendedExercise;
   let unrecommendedExercise;
+
   for (let j = 0; j < HBTItestResults.length; j++) {
     if (result === HBTItestResults[j].type) {
       type = HBTItestResults[j].type;
@@ -85,16 +117,37 @@ const HBTItestResult = ({ submittedList }) => {
       unrecommendedExercise = HBTItestResults[j].unrecommendedExercise;
     }
   }
+
+  let questions = {};
+  for (let i = 0; i < submittedList.length; i++) {
+    questions[`q${i + 1}`] = submittedList[i];
+  }
+
+  axios.post("http://127.0.0.1:8000/hbti/create/", {
+    user: "익명",
+    result: type,
+    ...userInfos,
+    ...questions,
+  });
+
   return (
     <div id="result-container">
-      <div id="hbti-question">나의 헬BTI는</div>
-      <div id="hbti-type">{type}</div>
-      <img src={imageSrc} alt="hbti-type" id="hbti-image" />
-      <div id="hbti-character">{character}</div>
-      <div id="hbti-description">&nbsp;{description}</div>
-      <div className="hbti-exercise">어울리는 운동: {recommendedExercise}</div>
-      <div className="hbti-exercise">
-        안 어울리는 운동: {unrecommendedExercise}
+      <div id="result-box">
+        <div id="hbti-question">나의 헬BTI는</div>
+        <div id="hbti-type">{type}</div>
+        <img src={imageSrc} alt="hbti-type" id="hbti-image" />
+        <div id="hbti-character">{character}</div>
+        <div id="hbti-description">&nbsp;{description}</div>
+        <div className="hbti-exercise">어울리는 운동: {recommendedExercise}</div>
+        <div className="hbti-exercise">안 어울리는 운동: {unrecommendedExercise}</div>
+      </div>
+      <div
+        className="home-button"
+        onClick={onCapture}
+        onMouseOver={mouseOver}
+        onMouseLeave={mouseLeave}
+      >
+        결과 캡쳐하기
       </div>
       <Link
         to={"/helchang-ability-test"}
@@ -102,8 +155,6 @@ const HBTItestResult = ({ submittedList }) => {
         id="button2"
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
-        onTouchStart={mouseOver}
-        onTouchEnd={mouseLeave}
       >
         헬창력 알아보기
       </Link>

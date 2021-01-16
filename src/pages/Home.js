@@ -8,8 +8,7 @@ const Home = () => {
     e.target.style = "background: #b088f9; color: white;";
   }
   function mouseLeave(e) {
-    e.target.style =
-      "background: #f7f7f7; border-color: #b088f9;  color: black";
+    e.target.style = "background: #f7f7f7; border-color: #b088f9;  color: black";
   }
   return (
     <div id="home-container">
@@ -22,8 +21,6 @@ const Home = () => {
         id="button1"
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
-        onTouchStart={mouseOver}
-        onTouchEnd={mouseLeave}
       >
         헬BTI 알아보기 (20문항)
       </Link>
@@ -33,8 +30,6 @@ const Home = () => {
         id="button2"
         onMouseOver={mouseOver}
         onMouseLeave={mouseLeave}
-        onTouchStart={mouseOver}
-        onTouchEnd={mouseLeave}
       >
         헬창력 알아보기 (20문항)
       </Link>

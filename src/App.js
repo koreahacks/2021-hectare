@@ -7,11 +7,9 @@ import "./App.scss";
 
 const App = () => {
   return (
-    <div className="main-container">
-      <Link to={"/"}>
-        <div id="logo">
-          <img src="/image/logo.png" alt="logo" />
-        </div>
+    <div id="main-container">
+      <Link to={"/"} id="logo">
+        <img src="/image/logo.png" alt="logo" />
       </Link>
       <div className="content">
         <Route path="/" exact={true} component={Home} />
