@@ -77,14 +77,18 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     const newResultBox = new Promise(function (resolve, reject) {
       document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
     });
+    document.getElementById("viewportMeta").setAttribute("content", "width=1200px");
     newResultBox
       .then(
         html2canvas(document.getElementById("result-box")).then((canvas) => {
-          console.log(document.getElementById("result-box"));
+          console.log(canvas);
           saveAs(canvas.toDataURL("image/png"), "hbti-result.png");
         })
       )
       .then(document.getElementById("result-box").removeChild(newLogo));
+    document
+      .getElementById("viewportMeta")
+      .setAttribute("content", "width=device-width, initial-scale=1");
   }
 
   function saveAs(uri, filename) {

@@ -113,13 +113,13 @@ a:hover {
 }
 
 #result-container {
-  margin-left: 12px;
-  margin-right: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: "Nanum Gothic", sans-serif;
   #result-box {
+    padding-left: 12px;
+    padding-right: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
