@@ -76,7 +76,7 @@ const HBTItestResult = ({ submittedList, userInfos }) => {
     newLogo.innerHTML = `<img src="/image/logo.png" alt="logo" />`;
     const newResultBox = new Promise(function (resolve, reject) {
       document.getElementById("result-box").insertAdjacentElement("afterbegin", newLogo);
-      document.getElementById("viewportMeta").setAttribute("content", "width=1200px");
+      document.getElementById("viewportMeta").setAttribute("content", "width=800");
     });
     newResultBox
       .then(
