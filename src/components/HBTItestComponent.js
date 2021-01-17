@@ -1,8 +1,6 @@
 import React from "react";
 
 const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) => {
-  const numOfQuestions = 20;
-
   function mouseOver(e) {
     e.target.style = "background: #b088f9; color: white;";
   }
