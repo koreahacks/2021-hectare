@@ -89,13 +89,14 @@ a:hover {
     display: flex;
     justify-content: flex-end;
     color: var(--unnamed-color-b088f9);
-    text-align: left;
     font-family: "Nanum Gothic", sans-serif;
     letter-spacing: 0px;
     font-weight: 700;
     font-size: 1.4rem;
-    cursor: pointer;
     color: #b088f9;
+    span {
+      cursor: pointer;
+    }
   }
   #question-header {
     height: 90px;
