@@ -25,14 +25,24 @@ const HBTItest = () => {
     setUserInfos({ gender: gender, age: age });
   };
 
+  const $currentPercentageBar = document.getElementById("current-percentage-bar");
+  if ($currentPercentageBar !== null) {
+    $currentPercentageBar.style = `width: ${Math.floor(
+      ((currentQuestionId - 1) / HBTItestQuestions.length) * 100
+    )}%`;
+    $currentPercentageBar.innerText = `${Math.floor(
+      ((currentQuestionId - 1) / HBTItestQuestions.length) * 100
+    )}%`;
+  }
+
   return (
     <>
       {Object.keys(userInfos).length === 0 ? (
         <CommonQuestion handleSubmit={handleSubmit} />
       ) : (
         <>
-          <div id="HBTI-test-container">
-            {HBTItestQuestions.length !== currentQuestionId - 1 && (
+          {HBTItestQuestions.length !== currentQuestionId - 1 && (
+            <div id="common-test-container">
               <>
                 <div id="fake-div"></div>
                 <HBTItestComponent
@@ -42,13 +52,13 @@ const HBTItest = () => {
                   onClickNext={onClickNext}
                 />
               </>
-            )}
-          </div>
-          <div id="HBTI-result-container">
-            {HBTItestQuestions.length === currentQuestionId - 1 && (
+            </div>
+          )}
+          {HBTItestQuestions.length === currentQuestionId - 1 && (
+            <div id="common-result-container">
               <HBTItestResult submittedList={submittedList} userInfos={userInfos} />
-            )}
-          </div>
+            </div>
+          )}
         </>
       )}
     </>

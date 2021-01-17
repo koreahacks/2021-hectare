@@ -1,6 +1,8 @@
 import React from "react";
 
 const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) => {
+  const numOfQuestions = 20;
+
   function mouseOver(e) {
     e.target.style = "background: #b088f9; color: white;";
   }
@@ -21,6 +23,7 @@ const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) =
   function mouseLeavePrevBtn(e) {
     e.target.style = "text-shadow: 0px 0px;";
   }
+
   return (
     <div id="question-container">
       <div id="question-header">
@@ -52,6 +55,9 @@ const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) =
         onMouseLeave={mouseLeave}
       >
         <span>{`${question.answer2.answer}`}</span>
+      </div>
+      <div id="total-percentage-bar">
+        <div id="current-percentage-bar" style={{ width: `0%` }}></div>
       </div>
     </div>
   );

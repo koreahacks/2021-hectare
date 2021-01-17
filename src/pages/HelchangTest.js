@@ -36,8 +36,8 @@ const HelchangTest = () => {
         <CommonQuestion handleSubmit={handleSubmit} />
       ) : (
         <>
-          <div id="helchang-test-container">
-            {HelchangTestQuestions.length !== currentQuestionId - 1 && (
+          {HelchangTestQuestions.length !== currentQuestionId - 1 && (
+            <div id="common-test-container">
               <>
                 <div id="fake-div"></div>
                 <HelchangTestComponent
@@ -47,13 +47,13 @@ const HelchangTest = () => {
                   onClickPrev={onClickPrev}
                 />
               </>
-            )}
-          </div>
-          <div id="helchang-result-container">
-            {HelchangTestQuestions.length === currentQuestionId - 1 && (
+            </div>
+          )}
+          {HelchangTestQuestions.length === currentQuestionId - 1 && (
+            <div id="common-result-container">
               <HelchangTestResult submittedList={submittedList} userInfos={userInfos} />
-            )}
-          </div>
+            </div>
+          )}
         </>
       )}
     </>
