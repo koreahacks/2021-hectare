@@ -1,6 +1,6 @@
 import React from "react";
 
-const HBTItestComponent = ({ question, onClickNext }) => {
+const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) => {
   function mouseOver(e) {
     e.target.style = "background: #b088f9; color: white;";
   }
@@ -15,9 +15,27 @@ const HBTItestComponent = ({ question, onClickNext }) => {
     e.target.style = "background: #f7f7f7";
     onClickNext(question.answer2.type);
   }
+  function mouseOverPrevBtn(e) {
+    e.target.style = "text-shadow: 1px 1px;";
+  }
+  function mouseLeavePrevBtn(e) {
+    e.target.style = "text-shadow: 0px 0px;";
+  }
   return (
     <div id="question-container">
-      <div id="question-number">{`Q${question.id}`}</div>
+      <div id="question-header">
+        <div id="question-number">{`Q${question.id}`}</div>
+        {questionId !== 1 && (
+          <div
+            id="previous-button"
+            onClick={onClickPrev}
+            onMouseOver={mouseOverPrevBtn}
+            onMouseLeave={mouseLeavePrevBtn}
+          >
+            이전
+          </div>
+        )}
+      </div>
       <div id="question">{`${question.question}`}</div>
       <div
         className="answer-button"

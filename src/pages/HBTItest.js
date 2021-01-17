@@ -4,11 +4,16 @@ import HBTItestComponent from "../components/HBTItestComponent";
 import HBTItestResult from "../components/HBTItestResult";
 import CommonQuestion from "../components/CommonQuestion";
 
-const HBTItest = (props) => {
+const HBTItest = () => {
   document.querySelector("title").innerText = "HBTI Test";
   const [currentQuestionId, setCurrentQuestionId] = useState(1);
   const [submittedList, setSubmittedList] = useState([]);
   const [userInfos, setUserInfos] = useState({});
+
+  const onClickPrev = () => {
+    setSubmittedList(submittedList.slice(0, submittedList.length - 1));
+    setCurrentQuestionId(currentQuestionId - 1);
+  };
 
   const onClickNext = (answer) => {
     const newSubmittedList = submittedList.concat(answer);
@@ -19,6 +24,7 @@ const HBTItest = (props) => {
   const handleSubmit = (gender, age) => {
     setUserInfos({ gender: gender, age: age });
   };
+
   return (
     <>
       {Object.keys(userInfos).length === 0 ? (
@@ -30,7 +36,9 @@ const HBTItest = (props) => {
               <>
                 <div id="fake-div"></div>
                 <HBTItestComponent
+                  questionId={currentQuestionId}
                   question={HBTItestQuestions[currentQuestionId - 1]}
+                  onClickPrev={onClickPrev}
                   onClickNext={onClickNext}
                 />
               </>

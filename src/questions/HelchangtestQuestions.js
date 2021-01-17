@@ -3,11 +3,11 @@ const HelchangTestQuestions = [
     id: 1,
     type: "radio",
     answer1: {
-      score: "plus",
+      score: "stay",
       select: "탄수화물 99% 단백질 1% 성분의 미슐랭 2스타 디저트 평생 먹기",
     },
     answer2: {
-      score: "stay",
+      score: "plus",
       select: "탄수화물 1% 단백질 99% 성분의 설국열차 양갱 평생 먹기",
     },
   },

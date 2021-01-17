@@ -1,6 +1,6 @@
 import React from "react";
 
-const HelchangTestComponent = ({ question, onClickNext }) => {
+const HelchangTestComponent = ({ questionId, question, onClickPrev, onClickNext }) => {
   function mouseOver(e) {
     e.target.style = "background: #b088f9; color: white;";
   }
@@ -23,11 +23,29 @@ const HelchangTestComponent = ({ question, onClickNext }) => {
       onClickNext("stay");
     }
   }
+  function mouseOverPrevBtn(e) {
+    e.target.style = "text-shadow: 1px 1px;";
+  }
+  function mouseLeavePrevBtn(e) {
+    e.target.style = "text-shadow: 0px 0px;";
+  }
   return (
     <div id="question-container">
       {question.type === "radio" ? (
         <>
-          <div id="question-number">{`Q${question.id}`}</div>
+          <div id="question-header">
+            <div id="question-number">{`Q${question.id}`}</div>
+            {questionId !== 1 && (
+              <div
+                id="previous-button"
+                onClick={onClickPrev}
+                onMouseOver={mouseOverPrevBtn}
+                onMouseLeave={mouseLeavePrevBtn}
+              >
+                이전
+              </div>
+            )}
+          </div>
           <div id="question">둘 중 하나를 선택</div>
           <div
             className="answer-button"
@@ -48,7 +66,19 @@ const HelchangTestComponent = ({ question, onClickNext }) => {
         </>
       ) : (
         <>
-          <div id="question-number">{`Q${question.id}`}</div>
+          <div id="question-header">
+            <div id="question-number">{`Q${question.id}`}</div>
+            {questionId !== 1 && (
+              <div
+                id="previous-button"
+                onClick={onClickPrev}
+                onMouseOver={mouseOverPrevBtn}
+                onMouseLeave={mouseLeavePrevBtn}
+              >
+                이전
+              </div>
+            )}
+          </div>
           <div id="question">{`${question.question}`}</div>
           <div className="OX-container">
             <div

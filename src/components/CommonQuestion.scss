@@ -34,6 +34,10 @@
     font-size: 1.8rem;
     margin-bottom: 30px;
   }
+  #age-box {
+    display: flex;
+    justify-content: baseline;
+  }
   input {
     margin-left: 20px;
     height: 1.8rem;
