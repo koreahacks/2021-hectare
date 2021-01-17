@@ -26,16 +26,6 @@ const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) =
     <div id="question-container">
       <div id="question-header">
         <div id="question-number">{`Q${question.id}`}</div>
-        {questionId !== 1 && (
-          <div
-            id="previous-button"
-            onClick={onClickPrev}
-            onMouseOver={mouseOverPrevBtn}
-            onMouseLeave={mouseLeavePrevBtn}
-          >
-            이전
-          </div>
-        )}
       </div>
       <div id="question">{`${question.question}`}</div>
       <div
@@ -54,6 +44,16 @@ const HBTItestComponent = ({ questionId, question, onClickPrev, onClickNext }) =
       >
         <span>{`${question.answer2.answer}`}</span>
       </div>
+      {questionId !== 1 && (
+        <div
+          id="previous-button"
+          onClick={onClickPrev}
+          onMouseOver={mouseOverPrevBtn}
+          onMouseLeave={mouseLeavePrevBtn}
+        >
+          이전
+        </div>
+      )}
       <div id="total-percentage-bar">
         <div id="current-percentage-bar" style={{ width: `0%` }}></div>
       </div>

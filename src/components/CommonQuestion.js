@@ -72,7 +72,12 @@ const CommonQuestion = ({ handleSubmit }) => {
             onChange={onChangeAge}
           />
         </div>
-        <div id="next-button" onClick={handleClick}>
+        <div
+          id="next-button"
+          onClick={handleClick}
+          onMouseOver={mouseOver}
+          onMouseLeave={mouseLeave}
+        >
           다음으로
         </div>
       </div>
