@@ -21,6 +21,8 @@
     width: 100%;
     height: 85%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 
@@ -36,8 +38,20 @@
     width: 400px;
     height: 85%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
+
+#footer {
+  margin: auto auto;
+  text-align: center;
+  font-weight: 800;
+  border-top: 2px solid;
+  padding-top: 5px;
+  color: #b48ef9;
+}
+
 a {
   color: black;
   text-decoration: none;
@@ -169,6 +183,12 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     padding-bottom: 70px;
+  }
+  #alert-info {
+    color: red;
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 800;
   }
   #hbti-question {
     text-align: center;
