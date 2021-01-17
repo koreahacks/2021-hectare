@@ -30,6 +30,16 @@ const HelchangTest = () => {
     setUserInfos({ gender: gender, age: age });
   };
 
+  const $currentPercentageBar = document.getElementById("current-percentage-bar");
+  if ($currentPercentageBar !== null) {
+    $currentPercentageBar.style = `width: ${Math.floor(
+      ((currentQuestionId - 1) / HelchangTestQuestions.length) * 100
+    )}%`;
+    $currentPercentageBar.innerText = `${Math.floor(
+      ((currentQuestionId - 1) / HelchangTestQuestions.length) * 100
+    )}%`;
+  }
+
   return (
     <>
       {Object.keys(userInfos).length === 0 ? (

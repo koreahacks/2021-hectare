@@ -63,6 +63,9 @@ const HelchangTestComponent = ({ questionId, question, onClickPrev, onClickNext 
           >
             <span>{`${question.answer2.select}`}</span>
           </div>
+          <div id="total-percentage-bar">
+            <div id="current-percentage-bar" style={{ width: `0%` }}></div>
+          </div>
         </>
       ) : (
         <>
@@ -97,6 +100,9 @@ const HelchangTestComponent = ({ questionId, question, onClickPrev, onClickNext 
             >
               <span>X</span>
             </div>
+          </div>
+          <div id="total-percentage-bar">
+            <div id="current-percentage-bar" style={{ width: `0%` }}></div>
           </div>
         </>
       )}
