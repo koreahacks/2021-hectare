@@ -36,7 +36,7 @@ const Home = () => {
         </Link>
       </div>
       <div id="footer">
-        <div id="email">문의: hectare2020@gmail.com</div>
+        <div id="email">문의: hectar2021@gmail.com</div>
       </div>
     </>
   );
