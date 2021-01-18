@@ -11,7 +11,7 @@ const HBTItestQuestions = [
     question:
       "워밍업이 막 끝난 당신, 수줍게 한 회원이 다가와 당신에게 운동 혹시 같이 할 수 있냐고 묻는다, 당신의 선택은?",
     answer1: { type: "E", answer: "(보조 개꿀~) 네 좋아요^^" },
-    answer2: { type: "I", answer: "같이 수줍어진다." },
+    answer2: { type: "I", answer: "정중히 거절한다." },
     type: "E/I",
   },
   {
