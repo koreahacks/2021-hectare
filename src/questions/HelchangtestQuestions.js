@@ -130,7 +130,7 @@ const HelchangTestQuestions = [
   {
     id: 19,
     type: "O/X",
-    question: "3대 500을 친다.",
+    question: "3대 500을 친다. (여성은 3대 300)",
     answer1: { score: "plus", select: "O" },
     answer2: { score: "stay", select: "X" },
   },

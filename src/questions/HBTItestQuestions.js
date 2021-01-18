@@ -30,7 +30,7 @@ const HBTItestQuestions = [
     },
     answer2: {
       type: "I",
-      answer: "난 학생이고 넌 선생이야. 아무것도 하지 않는다.",
+      answer: "모르는 척 한다.",
     },
     type: "E/I",
   },
@@ -38,7 +38,7 @@ const HBTItestQuestions = [
     id: 5,
     question: "선호하는 운동기록 방법은?",
     answer1: { type: "E", answer: "기록을 SNS에 공유한다." },
-    answer2: { type: "I", answer: "메모장l에 기록해서 나만 본다." },
+    answer2: { type: "I", answer: "메모장에 기록해서 나만 본다." },
     type: "E/I",
   },
   {
@@ -80,14 +80,14 @@ const HBTItestQuestions = [
   {
     id: 10,
     question:
-      "1달 뒤에 바디프로필을 무료로 찍을 기회가 생겼다. 단, 10KG를 감량하는 조건으로. 당신의 선택은?",
+      "1달 뒤에 바디프로필을 무료로 찍을 기회가 생겼다. 단, 10KG를 변화시키는 조건으로. 당신의 선택은?",
     answer1: {
       type: "S",
-      answer: "한달에 10KG를 빼는 건 불가능하다. 정중하게 거절하자.",
+      answer: "한달에 10KG 변화시키는 건 불가능하다. 정중하게 거절하자.",
     },
     answer2: {
       type: "N",
-      answer: "10KG면 충분히 가능하지 않을까? 우선 못먹어도 고!",
+      answer: "10KG면 충분히 가능하지 않을까? 우선 못 먹어도 고!",
     },
     type: "S/N",
   },
@@ -130,9 +130,9 @@ const HBTItestQuestions = [
   {
     id: 16,
     question:
-      "2021년, 운동을 시작하기로 결심한 당신, 한껏 부푼 마음을 가지고 다이소로 들어간다. 당신은 무엇을 샀을까?",
-    answer1: { type: "J", answer: "깔끔한 운동 다이어리" },
-    answer2: { type: "P", answer: "다양한 운동법이 담긴 책" },
+      "오늘 밤 신성한 하체운동이 계획되어 있다. 그런데 갑자기 친구들이 밤에 한잔 하자고 연락이 왔다. 오늘 밤 당신의 선택은?",
+    answer1: { type: "J", answer: "바벨을 든다." },
+    answer2: { type: "P", answer: "술잔을 든다." },
     type: "J/P",
   },
   {
