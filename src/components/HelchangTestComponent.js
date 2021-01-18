@@ -35,16 +35,6 @@ const HelchangTestComponent = ({ questionId, question, onClickPrev, onClickNext 
         <>
           <div id="question-header">
             <div id="question-number">{`Q${question.id}`}</div>
-            {questionId !== 1 && (
-              <div
-                id="previous-button"
-                onClick={onClickPrev}
-                onMouseOver={mouseOverPrevBtn}
-                onMouseLeave={mouseLeavePrevBtn}
-              >
-                이전
-              </div>
-            )}
           </div>
           <div id="question">둘 중 하나를 선택</div>
           <div
@@ -63,24 +53,22 @@ const HelchangTestComponent = ({ questionId, question, onClickPrev, onClickNext 
           >
             <span>{`${question.answer2.select}`}</span>
           </div>
-          <div id="total-percentage-bar">
-            <div id="current-percentage-bar" style={{ width: `0%` }}></div>
-          </div>
-        </>
-      ) : (
-        <>
-          <div id="question-header">
-            <div id="question-number">{`Q${question.id}`}</div>
-            {questionId !== 1 && (
-              <div
-                id="previous-button"
+          {questionId !== 1 && (
+            <div id="previous-button">
+              <span
                 onClick={onClickPrev}
                 onMouseOver={mouseOverPrevBtn}
                 onMouseLeave={mouseLeavePrevBtn}
               >
                 이전
-              </div>
-            )}
+              </span>
+            </div>
+          )}
+        </>
+      ) : (
+        <>
+          <div id="question-header">
+            <div id="question-number">{`Q${question.id}`}</div>
           </div>
           <div id="question">{`${question.question}`}</div>
           <div className="OX-container">
@@ -101,11 +89,22 @@ const HelchangTestComponent = ({ questionId, question, onClickPrev, onClickNext 
               <span>X</span>
             </div>
           </div>
-          <div id="total-percentage-bar">
-            <div id="current-percentage-bar" style={{ width: `0%` }}></div>
-          </div>
+          {questionId !== 1 && (
+            <div id="previous-button">
+              <span
+                onClick={onClickPrev}
+                onMouseOver={mouseOverPrevBtn}
+                onMouseLeave={mouseLeavePrevBtn}
+              >
+                이전
+              </span>
+            </div>
+          )}
         </>
       )}
+      <div id="total-percentage-bar">
+        <div id="current-percentage-bar" style={{ width: `0%` }}></div>
+      </div>
     </div>
   );
 };
